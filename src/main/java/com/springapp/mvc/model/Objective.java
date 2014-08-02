@@ -1,15 +1,25 @@
 package com.springapp.mvc.model;
 
+import javax.persistence.*;
+
+@Entity(name = "objective")
 public class Objective {
 
-    private String name;
-    private String description;
-    private Pillar pillar;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
 
-    public Objective(String name, String description, Pillar pillar) {
+    @Basic
+    private String name;
+    @Basic
+    private String description;
+
+    public Objective(String name, String description) {
         this.name = name;
         this.description = description;
-        this.pillar = pillar;
+    }
+
+    public Objective() {
     }
 
     public String getName() {
@@ -20,7 +30,19 @@ public class Objective {
         return description;
     }
 
-    public Pillar getPillar() {
-        return pillar;
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }
