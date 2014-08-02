@@ -1,10 +1,6 @@
 package com.springapp.mvc.model;
 
 import org.junit.Before;
-import org.junit.Test;
-
-import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.assertThat;
 
 public class ObjectiveTest {
 
@@ -18,12 +14,6 @@ public class ObjectiveTest {
         name = "name";
         description = "description";
         pillar = new Pillar(1);
-        objective = new Objective(name, description);
     }
 
-    @Test
-    public void cannotBeEmpty() throws Exception {
-        assertThat(objective.getName(), is(name));
-        assertThat(objective.getDescription(), is(description));
-    }
 }
