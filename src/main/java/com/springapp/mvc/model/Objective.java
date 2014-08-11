@@ -7,7 +7,7 @@ public class Objective {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private Long id;
 
     @Basic
     private String name;

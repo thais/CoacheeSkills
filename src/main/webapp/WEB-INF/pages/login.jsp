@@ -23,6 +23,14 @@
                     <h1>Login</h1>
                 </div>
             </div>
+            <form:form method="post" action="/login/login" commandName="login" class="form-horizontal">
+                <div class="control-group">
+                    <form:label cssClass="control-label" path="username">Username:</form:label>
+                    <div class="controls">
+                        <form:input path="username"/>
+                    </div>
+                </div>
+            </form:form>
         </div>
     </body>
 </html>
