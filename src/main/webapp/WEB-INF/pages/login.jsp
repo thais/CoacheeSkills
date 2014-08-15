@@ -23,7 +23,7 @@
                     <h1>Login</h1>
                 </div>
             </div>
-            <form action="login/login" method="post">
+            <form action="/login" method="post">
                 <div class="control-group">
                     <label>Username:</label>
                     <div class="controls">

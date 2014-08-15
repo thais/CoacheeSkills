@@ -16,12 +16,12 @@ public class LoginController {
     @Autowired
     private LoginRepository loginRepository;
 
-    @RequestMapping("/login")
+    @RequestMapping("/")
     public String doSomethingToTest() {
         return "login";
     }
 
-    @RequestMapping(value = "/login/login", method = RequestMethod.POST)
+    @RequestMapping(value = "/login", method = RequestMethod.POST)
     public String login(@ModelAttribute("login") Login login, BindingResult result) {
         return "redirect:/home";
     }

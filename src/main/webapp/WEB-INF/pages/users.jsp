@@ -22,7 +22,7 @@
     <div class="row">
         <div class="span8 offset2">
             <h1>Users</h1>
-            <form:form method="post" action="add" commandName="user" class="form-horizontal">
+            <form:form method="post" action="user/add" commandName="user" class="form-horizontal">
             <div class="control-group">
                 <form:label cssClass="control-label" path="firstName">First Name:</form:label>
                 <div class="controls">
@@ -64,7 +64,7 @@
                             <td>${user.lastName}, ${user.firstName}</td>
                             <td>${user.email}</td>
                             <td>
-                                <form action="delete/${user.id}" method="post"><input type="submit" class="btn btn-danger btn-mini" value="Delete"/></form>
+                                <form action="/user/delete/${user.id}" method="post"><input type="submit" class="btn btn-danger btn-mini" value="Delete"/></form>
                             </td>
                         </tr>
                     </c:forEach>
