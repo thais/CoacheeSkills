@@ -18,7 +18,7 @@ public class LoginController {
     @RequestMapping(value = "/login/login", method = RequestMethod.POST)
     public String login() {
 
-        return "redirect:/login";
+        return "redirect:/objectives";
     }
 
 }
