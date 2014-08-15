@@ -1,6 +1,11 @@
 package com.springapp.mvc.controller;
 
+import com.springapp.mvc.model.Login;
+import com.springapp.mvc.model.LoginRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -8,7 +13,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping("/")
 public class LoginController {
 
-
+    @Autowired
+    private LoginRepository loginRepository;
 
     @RequestMapping("/login")
     public String doSomethingToTest() {
@@ -16,9 +22,8 @@ public class LoginController {
     }
 
     @RequestMapping(value = "/login/login", method = RequestMethod.POST)
-    public String login() {
-
-        return "redirect:/objectives";
+    public String login(@ModelAttribute("login") Login login, BindingResult result) {
+        return "redirect:/home";
     }
 
 }
