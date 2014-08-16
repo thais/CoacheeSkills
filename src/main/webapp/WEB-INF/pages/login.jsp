@@ -12,32 +12,37 @@
         <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link href="http://twitter.github.io/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
-        <link href="http://twitter.github.io/bootstrap/assets/css/bootstrap-responsive.css" rel="stylesheet">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="/css/login.css">
     </head>
 
     <body>
         <div class="container">
             <div class="row">
-                <div class="span8 offset2">
-                    <h1>Login</h1>
+                <h1>Login</h1>
+            </div>
+            <div class="row">
+                <div class="jumbotron">
+                        <form class="form-signin" action="/login" method="post">
+                            <div class="form-group">
+                                <label>Username:</label>
+                                <input class="form-control" type="text" placeholder="Username"/>
+                            </div>
+                            <div class="form-group">
+                                <label>Password</label>
+                                <input class="form-control" type="password" placeholder="Password"/>
+                            </div>
+                            <button type="submit" class="btn btn-default btn-lg">Go, go, Power Ranger!</button>
+                        </form>
                 </div>
             </div>
-            <form action="/login" method="post">
-                <div class="control-group">
-                    <label>Username:</label>
-                    <div class="controls">
-                        <input type="text"/>
-                    </div>
-                </div>
-                <div class="control-group">
-                    <label>Password:</label>
-                    <div class="controls">
-                        <input type="text"/>
-                    </div>
-                </div>
-                <input type="submit" value="ok" />
-            </form>
+            <div class="row">
+            </div>
         </div>
     </body>
 </html>
