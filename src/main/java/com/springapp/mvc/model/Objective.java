@@ -23,7 +23,7 @@ public class Objective {
         return description;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
