@@ -41,6 +41,13 @@
                     <form:input path="email"/>
                 </div>
             </div>
+
+            <div class="control-group">
+                <form:label cssClass="control-label" path="password">Password:</form:label>
+                <div class="controls">
+                    <form:input path="password"/>
+                </div>
+            </div>
             <div class="control-group">
                 <div class="controls">
                     <input type="submit" value="Add User" class="btn"/>

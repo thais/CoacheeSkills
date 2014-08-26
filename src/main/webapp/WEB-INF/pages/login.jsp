@@ -31,11 +31,11 @@
                         <form class="form-signin" action="/login" method="post">
                             <div class="form-group">
                                 <label>Username:</label>
-                                <input class="form-control" type="text" placeholder="Username"/>
+                                <input class="form-control" type="text" placeholder="Username" name="username"/>
                             </div>
                             <div class="form-group">
                                 <label>Password</label>
-                                <input class="form-control" type="password" placeholder="Password"/>
+                                <input class="form-control" type="password" placeholder="Password" name="password"/>
                             </div>
                             <button type="submit" class="btn btn-default btn-lg">Go, go, Power Ranger!</button>
                         </form>
