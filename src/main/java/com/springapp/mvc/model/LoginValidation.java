@@ -5,9 +5,6 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-/**
- * Created by thais on 8/25/14.
- */
 @Component
 public class LoginValidation {
 

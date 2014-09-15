@@ -35,6 +35,18 @@
                     <form:input path="name"/>
                 </div>
             </div>
+
+            <div class="control-group">
+                <form:label cssClass="control-label" path="objective">objective:</form:label>
+                <div class="controls">
+                    <form:select path="objective">
+                        <form:options items="${objectiveList}" itemValue="id" itemLabel="name" value=""/>
+                        <%--<form:select path="companyName" id="companyName" items="${vars.companyNames}" itemValue="companyName" itemLabel="companyName" />--%>
+
+                    </form:select>
+                </div>
+            </div>
+
             <div class="control-group">
                 <div class="controls">
                     <input type="submit" value="Add task" class="btn"/>
@@ -49,6 +61,7 @@
                     <tr>
                         <th>Description</th>
                         <th>Name</th>
+                        <th>Objective</th>
                         <th>&nbsp;</th>
                     </tr>
                     </thead>
@@ -57,6 +70,8 @@
                         <tr>
                             <td>${task.description}</td>
                             <td>${task.name}</td>
+                                ${task.objective.name}
+
                             <td>
                                 <form action="task/delete/${task.id}" method="post"><input type="submit" class="btn btn-danger btn-mini" value="Delete"/></form>
                             </td>

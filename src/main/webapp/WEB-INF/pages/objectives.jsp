@@ -35,6 +35,14 @@
                     <form:input path="name"/>
                 </div>
             </div>
+
+            <div class="control-group">
+                <form:label cssClass="control-label" path="tasks">Tasks:</form:label>
+                <div class="controls">
+                    <form:select path="tasks"/>
+                </div>
+            </div>
+
             <div class="control-group">
                 <div class="controls">
                     <input type="submit" value="Add Objective" class="btn"/>
@@ -49,6 +57,7 @@
                     <tr>
                         <th>Description</th>
                         <th>Name</th>
+                        <th>Tasks</th>
                         <th>&nbsp;</th>
                     </tr>
                     </thead>
@@ -57,6 +66,9 @@
                         <tr>
                             <td>${objective.description}</td>
                             <td>${objective.name}</td>
+                            <c:forEach items="${objective.tasks}" var="task">
+                                <td>${task.name}</td>
+                            </c:forEach>
                             <td>
                                 <form action="objective/delete/${objective.id}" method="post"><input type="submit" class="btn btn-danger btn-mini" value="Delete"/></form>
                             </td>
